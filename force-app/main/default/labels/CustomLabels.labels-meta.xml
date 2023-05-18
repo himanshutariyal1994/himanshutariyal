@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Adjust_Quote_Price</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Adjust Quote Price</shortDescription>
+        <value>Adjust Quote Price</value>
+    </labels>
+    <labels>
+        <fullName>Adjusted_Amount</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Adjusted Amount</shortDescription>
+        <value>Adjusted Amount</value>
+    </labels>
+    <labels>
+        <fullName>Amount_is_Required_Field</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Amount is Required Field</shortDescription>
+        <value>Please note that Amount is a required field</value>
+    </labels>
+    <labels>
+        <fullName>Cancel</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Close</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Close</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>End_Date</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>End Date</shortDescription>
+        <value>End Date</value>
+    </labels>
+    <labels>
+        <fullName>Error_Occured</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Error Occured</shortDescription>
+        <value>Error Occured</value>
+    </labels>
+    <labels>
+        <fullName>Field_Validation_Issue</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Field Validation Issue</shortDescription>
+        <value>Field Validation Issue</value>
+    </labels>
+    <labels>
+        <fullName>No_Quote_Found</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Quote Found</shortDescription>
+        <value>No quote details found</value>
+    </labels>
+    <labels>
+        <fullName>Quote_Dates_Validation</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Quote Dates Validation</shortDescription>
+        <value>Start Date cannot be greater than End Date</value>
+    </labels>
+    <labels>
+        <fullName>Quote_Dates_required</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Quote Dates required</shortDescription>
+        <value>Please check that Start and End Dates are required fields</value>
+    </labels>
+    <labels>
+        <fullName>Quote_Saved</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Quote Saved</shortDescription>
+        <value>Quote details saved</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Start_Date</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Start Date</shortDescription>
+        <value>Start Date</value>
+    </labels>
+    <labels>
+        <fullName>Success_Toast</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Success Toast</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>Adjust_Quote</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Adjust Quote</shortDescription>
+        <value>Adjust Quote</value>
+    </labels>
+    <labels>
+        <fullName>Quote_Adjusted_Amount</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Quote Adjusted Amount</shortDescription>
+        <value>Quote Adjusted Amount</value>
+    </labels>
+</CustomLabels>

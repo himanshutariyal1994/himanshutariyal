@@ -11,6 +11,17 @@ import { ShowToastEvent } from "lightning/platformShowToastEvent";
 import getQuoteDetails from "@salesforce/apex/ManageQuoteCtlr.getQuoteDetails";
 import updateQuoteDetails from "@salesforce/apex/ManageQuoteCtlr.updateQuoteDetails";
 
+import START_DATE from "@salesforce/label/c.Start_Date";
+import END_DATE from "@salesforce/label/c.End_Date";
+import SAVE from "@salesforce/label/c.Save";
+import NO_QUOTE_FOUND from "@salesforce/label/c.No_Quote_Found";
+import ERROR_OCCURED from "@salesforce/label/c.Error_Occured";
+import VALIDATION_ISSUE from "@salesforce/label/c.Field_Validation_Issue";
+import QUOTE_DATES_VALIDATION from "@salesforce/label/c.Quote_Dates_Validation";
+import QUOTE_DATES_REQUIRED from "@salesforce/label/c.Quote_Dates_required";
+import SUCCESS_TOAST from "@salesforce/label/c.Success_Toast";
+import QUOTE_SAVED from "@salesforce/label/c.Quote_Saved";
+
 export default class EditQuote extends LightningElement {
   @api recordId;
   @track quoteData = {};
@@ -24,17 +35,16 @@ export default class EditQuote extends LightningElement {
   }
 
   label = {
-    startDate: "Start Date",
-    endDate: "End Date",
-    save: "Save",
-    noQuoteFound: "No Quote Details found",
-    errorOccured: "Error Occured",
-    validationIssue: "Field Validation Issue",
-    validationIssueLabel:
-      "Please check that Start and End Dates are required fields",
-    startDateGreaterThanEndDate: "Start Date cannot be greater than End Date",
-    successToast: "Success",
-    quoteSavedMsg: "Saved Quote Details"
+    startDate: START_DATE,
+    endDate: END_DATE,
+    save: SAVE,
+    noQuoteFound: NO_QUOTE_FOUND,
+    errorOccured: ERROR_OCCURED,
+    validationIssue: VALIDATION_ISSUE,
+    validationIssueLabel: QUOTE_DATES_REQUIRED,
+    startDateGreaterThanEndDate: QUOTE_DATES_VALIDATION,
+    successToast: SUCCESS_TOAST,
+    quoteSavedMsg: QUOTE_SAVED
   };
 
   // Wire method to fetch the Quote details from record id

@@ -11,23 +11,35 @@ import { ShowToastEvent } from "lightning/platformShowToastEvent";
 import getQuoteDetails from "@salesforce/apex/ManageQuoteCtlr.getQuoteDetails";
 import updateQuoteDetails from "@salesforce/apex/ManageQuoteCtlr.updateQuoteDetails";
 
+import ADJUSTED_AMOUNT from "@salesforce/label/c.Adjusted_Amount";
+import CLOSE from "@salesforce/label/c.Close";
+import CANCEL from "@salesforce/label/c.Cancel";
+import ADJUST_QUOTE_PRICE from "@salesforce/label/c.Adjust_Quote_Price";
+import NO_QUOTE_FOUND from "@salesforce/label/c.No_Quote_Found";
+import ERROR_OCCURED from "@salesforce/label/c.Error_Occured";
+import VALIDATION_ISSUE from "@salesforce/label/c.Field_Validation_Issue";
+import QUOTE_AMOUNT_REQUIRED from "@salesforce/label/c.Amount_is_Required_Field";
+import SAVE from "@salesforce/label/c.Save";
+import SUCCESS_TOAST from "@salesforce/label/c.Success_Toast";
+import QUOTE_SAVED from "@salesforce/label/c.Quote_Saved";
+
 export default class AdjustQuotePrice extends LightningElement {
   @api recordId;
   @track quoteData = {};
   isLoading = false;
   showModal = false;
   label = {
-    adjustedAmount: "Adjusted Amount",
-    close: "Close",
-    cancel: "Cancel",
-    save: "Save",
-    adjustQuotePrice: "Adjust quote price",
-    errorOccured: "Error Occured",
-    validationIssue: "Field Validation Issue",
-    validationIssueLabel:
-      "Please check that adjusted Amount is a required field",
-    successToast: "Success",
-    quoteSavedMsg: "Saved Quote Adjusted Amount"
+    adjustedAmount: ADJUSTED_AMOUNT,
+    close: CLOSE,
+    cancel: CANCEL,
+    save: SAVE,
+    adjustQuotePrice: ADJUST_QUOTE_PRICE,
+    errorOccured: ERROR_OCCURED,
+    validationIssue: VALIDATION_ISSUE,
+    noQuoteFound: NO_QUOTE_FOUND,
+    validationIssueLabel: QUOTE_AMOUNT_REQUIRED,
+    successToast: SUCCESS_TOAST,
+    quoteSavedMsg: QUOTE_SAVED
   };
   adjustedAmount = 0;
 

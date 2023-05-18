@@ -37,13 +37,18 @@
           class="slds-modal__content slds-var-p-around_medium"
           id="modalBodyId"
         >
-          <lightning-input
-            type="number"
-            name="quoteAmount"
-            label={label.adjustedAmount}
-            value={quoteData.totalQuoteAmount}
-            onchange={handleQuoteAmountChange}
-          ></lightning-input>
+          <template lwc:if={quoteDataFetched}>
+            <lightning-input
+              type="number"
+              name="quoteAmount"
+              label={label.adjustedAmount}
+              value={quoteData.totalQuoteAmount}
+              onchange={handleQuoteAmountChange}
+            ></lightning-input>
+          </template>
+          <template lwc:else>
+            <div class="slds-text-align_center">{label.noQuoteFound}</div>
+          </template>
         </div>
 
         <!-- Modal footer -->
@@ -54,12 +59,14 @@
             onclick={hideModal}
           ></lightning-button>
 
-          <lightning-button
-            label={label.save}
-            variant="brand"
-            class="slds-var-m-left_small"
-            onclick={handleSaveAdjustedAmount}
-          ></lightning-button>
+          <template lwc:if={quoteDataFetched}>
+            <lightning-button
+              label={label.save}
+              variant="brand"
+              class="slds-var-m-left_small"
+              onclick={handleSaveAdjustedAmount}
+            ></lightning-button>
+          </template>
         </footer>
       </div>
     </section>
