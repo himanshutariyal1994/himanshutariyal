@@ -1,7 +1,68 @@
-<!-- Adjust Quote Price -->
 <template>
-  <lightning-input-field
-    field-name={adjustedAmountLabel}
-    value={adjustedAmount}
-  ></lightning-input-field>
+  <template if:true={showModal}>
+    <section
+      role="dialog"
+      tabindex="-1"
+      aria-labelledby="modal-heading-01"
+      aria-modal="true"
+      aria-describedby="modal-content-id-1"
+      class="slds-modal slds-fade-in-open"
+    >
+      <div class="slds-modal__container">
+        <!-- Modal header -->
+        <header class="slds-modal__header">
+          <button
+            class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+            title={label.close}
+            onclick={hideModal}
+          >
+            <lightning-icon
+              icon-name="utility:close"
+              alternative-text={label.close}
+              variant="inverse"
+              size="small"
+            ></lightning-icon>
+            <span class="slds-assistive-text">{label.close}</span>
+          </button>
+          <h2
+            id="modalHeaderLabel"
+            class="slds-text-heading_medium slds-hyphenate"
+          >
+            {label.adjustQuotePrice}
+          </h2>
+        </header>
+
+        <!-- Modal body -->
+        <div
+          class="slds-modal__content slds-var-p-around_medium"
+          id="modalBodyId"
+        >
+          <lightning-input
+            type="number"
+            name="quoteAmount"
+            label={label.adjustedAmount}
+            value={quoteData.totalQuoteAmount}
+            onchange={handleQuoteAmountChange}
+          ></lightning-input>
+        </div>
+
+        <!-- Modal footer -->
+        <footer class="slds-modal__footer">
+          <lightning-button
+            label={label.cancel}
+            variant="neutral"
+            onclick={hideModal}
+          ></lightning-button>
+
+          <lightning-button
+            label={label.save}
+            variant="brand"
+            class="slds-var-m-left_small"
+            onclick={handleSaveAdjustedAmount}
+          ></lightning-button>
+        </footer>
+      </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+  </template>
 </template>

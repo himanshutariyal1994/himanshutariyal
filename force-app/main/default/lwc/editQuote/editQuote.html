@@ -1,9 +1,43 @@
-<!-- Edit Quote -->
 <template>
-  <h3 class="slds-page-header__title">Welcome to quote {quoteData.name}!</h3>
-  Quote Project Ends On:
-  <lightning-formatted-date-time
-    value={quoteData.endDate}
-    time-zone="UTC"
-  ></lightning-formatted-date-time>
+  <template lwc:if={quoteDataFetched}>
+    <template lwc:if={isLoading}>
+      <lightning-spinner variant="brand" size="large"></lightning-spinner>
+    </template>
+
+    <h3 class="slds-page-header__title">{quoteHeader}</h3>
+
+    <lightning-layout class="slds-var-p-around_small">
+      <lightning-layout-item size="4">
+        <!-- Start Date -->
+        <lightning-input
+          type="date"
+          label={label.startDate}
+          required="true"
+          value={quoteData.startDate}
+          onchange={handleStartDateChange}
+        ></lightning-input>
+
+        <!-- End Date -->
+        <lightning-input
+          type="date"
+          label={label.endDate}
+          value={quoteData.endDate}
+          required="true"
+          onchange={handleEndDateChange}
+        ></lightning-input>
+      </lightning-layout-item>
+    </lightning-layout>
+
+    <!-- Save Quote details -->
+    <lightning-button
+      label={label.save}
+      class="slds-var-p-around_small slds-var-m-top_small"
+      variant="brand"
+      onclick={handleSaveQuote}
+    ></lightning-button>
+  </template>
+
+  <template lwc:else>
+    <div class="slds-text-align_center">{label.noQuoteFound}</div>
+  </template>
 </template>

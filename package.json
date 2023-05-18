@@ -13,7 +13,11 @@
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "postinstall": "husky install",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "org:create": "sf org create scratch -f config/project-scratch-def.json -y 15 -d -c",
+    "org:setup": "sf org create scratch -f config/project-scratch-def.json -y 15 -d -c && sfdx force:source:push -f && sf org assign permset -n Provus_Quoting && npm run org:launch",
+    "org:launch": "sf org open",
+    "org:teardown": "sf org delete scratch -p"
   },
   "devDependencies": {
     "@lwc/eslint-plugin-lwc": "^1.1.2",
